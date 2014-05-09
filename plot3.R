@@ -8,7 +8,7 @@ dt <- subset(dt, dt$Date == "2007-02-01" | dt$Date == "2007-02-02")
 dt$Time <- strptime(paste(dt$Date, dt$Time, sep=" "), "%Y-%m-%d %H:%M:%S")
 
 ##output the plot to PNG
-png(filename="plot3.png", width=480, height=480)
+png(filename="plot3.png", width=480, height=480, units="px", bg="transparent")
 plot(dt$Time, dt$Sub_metering_1, type="l", col="black", ylab="Energy sub metering", xlab="")
 lines(dt$Time, dt$Sub_metering_2, type="l", col="red")
 lines(dt$Time, dt$Sub_metering_3, type="l", col="blue")

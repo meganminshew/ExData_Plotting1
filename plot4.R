@@ -8,7 +8,7 @@ dt <- subset(dt, dt$Date == "2007-02-01" | dt$Date == "2007-02-02")
 dt$Time <- strptime(paste(dt$Date, dt$Time, sep=" "), "%Y-%m-%d %H:%M:%S")
 
 ##output the 2x2 plots to PNG
-png(filename="plot4.png", width=480, height=480)
+png(filename="plot4.png", width=480, height=480, units="px", bg="transparent")
 par(mfrow = c(2,2))
 plot(dt$Time, dt$Global_active_power, type="l", ylab="Global Active Power", xlab="")
 plot(dt$Time, dt$Voltage, type="l", ylab="Voltage", xlab="datetime")

@@ -10,6 +10,6 @@ dt$Time <- strptime(paste(dt$Date, dt$Time, sep=" "), "%Y-%m-%d %H:%M:%S")
 
 
 ##output the plot to PNG
-png(filename="plot2.png", width=480, height=480)
+png(filename="plot2.png", width=480, height=480, units="px", bg="transparent")
 plot(dt$Time, dt$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 dev.off()

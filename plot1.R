@@ -8,6 +8,6 @@ dt <- subset(dt, dt$Date == "2007-02-01" | dt$Date == "2007-02-02")
 gap <- as.numeric(dt$Global_active_power)
 
 ##output the histogram to PNG
-png(filename="plot1.png", width=480, height=480)
+png(filename="plot1.png", width=480, height=480, units="px", bg="transparent")
 hist(gap, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
 dev.off()
